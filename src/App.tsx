@@ -4,7 +4,6 @@ import { Books } from './App/Components/Books/Books';
 import useDebounce from './App/Utils/Hooks/useDebounce';
 import { searchBooks } from './App/Utils/Requests';
 import { NoResults } from './App/Components/NoResults/NoResults';
-import { Link } from '@reach/router';
 
 function App() {
   const [searchTerm, setSearchTerm] = React.useState('');
@@ -12,7 +11,7 @@ function App() {
   const [fisrtTime, setFisrtTime] = useState(true);
   const [isSearching, setIsSearching] = useState(false);
 
-  const debouncedSearchTerm = useDebounce(searchTerm, 1500);
+  const debouncedSearchTerm = useDebounce(searchTerm, 1000);
 
   useEffect(
     () => {

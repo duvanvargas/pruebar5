@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { BookContainer } from './BookStyles';
 import { RouteComponentProps } from '@reach/router';
 import { useParams } from "@reach/router"
-import { NotFound } from '../NotFound/NotFound';
 import { Book } from '../../Components/Books/Book.interface';
 import { getBook } from '../../Utils/Requests';
 import { Loading } from '../../Components/Loading/Loading';

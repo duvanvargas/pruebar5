@@ -1,10 +1,8 @@
 import React from 'react';
 import { Loader, LoaderSpin, LoaderSpinner } from './LoadingStyles';
 
-export interface LoadingProps {
-}
 
-export function Loading({}: LoadingProps) {
+export function Loading() {
 
   return (
     <Loader>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { SearchInput } from './SearchBarStyles';
 import { Loading } from '../Loading/Loading';
 

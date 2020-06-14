@@ -1,10 +1,7 @@
 import React from 'react';
 import { NoRes } from './NoResultsStyles';
 
-export interface NoResultsProps {
-}
-
-export function NoResults({}: NoResultsProps) {
+export function NoResults() {
 
   return (
     <NoRes>No hemos encontrado resultados :(</NoRes>
