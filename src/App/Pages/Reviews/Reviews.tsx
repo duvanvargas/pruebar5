@@ -25,7 +25,7 @@ export function Reviews() {
     <ReviewsContainer>
       <SearchBar placeholder="Buscar un usuario..." isSearching={false} onChange={(e) => setSearchTerm(e.target.value)} />
       <TitleReview>Reseñas</TitleReview>
-      {appState.reviewList && appState.reviewList.length && appState.reviewList.filter((review:Review)=> debouncedSearchTerm.length === 0 ? true:review.username?.indexOf(debouncedSearchTerm) !== -1).map((review: Review,index: number) => (
+      {appState.reviewList && appState.reviewList.filter((review:Review)=> debouncedSearchTerm.length === 0 ? true:review.username?.indexOf(debouncedSearchTerm) !== -1).map((review: Review,index: number) => (
         <ReviewCard key={index} review={review} />
       ))}
       {appState.reviewList && appState.reviewList.filter((review:Review)=> debouncedSearchTerm.length === 0 ? true:review.username?.indexOf(debouncedSearchTerm) !== -1).length === 0 && (
