@@ -24,7 +24,7 @@ export function BookReviews({ bookId = "" }: BookReviewsProps) {
   return (
     <>
       <TitleReview>Reseñas</TitleReview>
-      {appState.reviewList && appState.reviewList.length && appState.reviewList.filter((review: Review)=> review.id === bookId).map((review: Review,index: number) =>(
+      {appState.reviewList && appState.reviewList.filter((review: Review)=> review.id === bookId).map((review: Review,index: number) =>(
         <ReviewCard review={review} key={index}/>
       ))}
       {appState.reviewList && appState.reviewList.filter((review: Review)=> review.id === bookId).length === 0 && (

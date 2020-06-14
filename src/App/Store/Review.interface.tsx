@@ -4,4 +4,5 @@ export interface Review {
   username?: string
   review?: string
   timestamp?: string
+  unique_id?: string
 }
