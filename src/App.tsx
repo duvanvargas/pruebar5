@@ -9,6 +9,7 @@ import { Link } from '@reach/router';
 function App() {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [results, setResults] = useState([]);
+  const [fisrtTime, setFisrtTime] = useState(true);
   const [isSearching, setIsSearching] = useState(false);
 
   const debouncedSearchTerm = useDebounce(searchTerm, 1500);
@@ -26,8 +27,12 @@ function App() {
       } else {
         setResults([]);
       }
+      if(fisrtTime){
+        setSearchTerm('javascript');
+        setFisrtTime(false);
+      }
     },
-    [debouncedSearchTerm]
+    [debouncedSearchTerm, fisrtTime]
   );
   return (
     <>
